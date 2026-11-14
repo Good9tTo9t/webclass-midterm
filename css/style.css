@@ -181,6 +181,21 @@ th, td {
   padding: 8px 12px; 
 }
 
+button {
+    background-color: #1e293b;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3b82f6;
+}
+
 .correct {
     color: green;
 }
