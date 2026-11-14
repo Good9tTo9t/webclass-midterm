@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加入我們 | 北科大瓶蓋棒球社</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" aria-label="主選單">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html" class="nav-link">首頁</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">關於我們</a></li>
+      <li class="nav-item"><a href="rules.html" class="nav-link">規則教學</a></li>
+      <li class="nav-item"><a href="schedule.html" class="nav-link">活動賽程</a></li>
+      <li class="nav-item"><a href="join.html" class="nav-link active" aria-current="page">加入我們</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+
+    <h1>加入我們</h1>
+
+    <section class="how-to-join">
+      <h2>入社方式</h2>
+      <ul>
+        <li>Instagram連結表單</li>
+        <li>直接私訊Instagram</li>
+      </ul>
+      <p>社費：200/年（社服另購）</p>
+    </section>
+
+    <section class="faq">
+      <h2>常見問題</h2>
+      <div class="faq-item">
+        <h3>（問題 1）</h3>
+        <p>（回答）</p>
+      </div>
+      <div class="faq-item">
+        <h3>（問題 2）</h3>
+        <p>（回答）</p>
+      </div>
+    </section>
+
+    <section class="quiz">
+      <h2>瓶蓋棒球小測驗</h2>
+      <p>入社前先考考自己，看你對瓶蓋棒球了解多少！</p>
+
+      <div class="quiz-question" data-answer="c">
+        <h3>1. 球擊出後越過全壘打牆，算什麼？</h3>
+        <label><input type="radio" name="q1" value="a"> 一壘安打</label>
+        <label><input type="radio" name="q1" value="b"> 三壘安打</label>
+        <label><input type="radio" name="q1" value="c"> 全壘打</label>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <div class="quiz-question" data-answer="b">
+        <h3>2. 球擊出後沒碰到地板，直接打到全壘打牆，算什麼？</h3>
+        <label><input type="radio" name="q2" value="a"> 二壘安打</label>
+        <label><input type="radio" name="q2" value="b"> 三壘安打</label>
+        <label><input type="radio" name="q2" value="c"> 全壘打</label>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <div class="quiz-question" data-answer="a">
+        <h3>3. 社團每週固定練習是星期幾？</h3>
+        <label><input type="radio" name="q3" value="a"> 星期一</label>
+        <label><input type="radio" name="q3" value="b"> 星期三</label>
+        <label><input type="radio" name="q3" value="c"> 星期五</label>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <div class="quiz-question" data-answer="b">
+        <h3>4. 一年的社費是多少？</h3>
+        <label><input type="radio" name="q4" value="a"> 100 元</label>
+        <label><input type="radio" name="q4" value="b"> 200 元</label>
+        <label><input type="radio" name="q4" value="c"> 500 元</label>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <button type="button" id="quiz-submit">交卷</button>
+      <button type="button" id="quiz-reset">重新作答</button>
+      <p id="quiz-result"></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 北科大瓶蓋棒球社</p>
+    <p>
+      <a href="https://www.ntut.edu.tw/" target="_blank" rel="noopener">國立臺北科技大學</a>
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

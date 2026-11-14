@@ -1,0 +1,146 @@
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-family: sans-serif;
+}
+
+.navbar {
+    background-color: #1e293b;
+    padding: 0 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-list .nav-right {
+    margin-left: auto;
+}
+
+.nav-link {
+    display: block;
+    color: #cbd5e1;
+    padding: 1rem 1.25rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    text-decoration: underline wavy #fff;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background-color: #334155;
+}
+
+.nav-link:active {
+    color: #ffffff;
+    background-color: #3b82f6; 
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background-color: #334155;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.features {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+
+.grid-cell {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 1.25rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid-cell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.grid-cell h3 {
+    margin-top: 0;
+    color: #1e293b;
+}
+
+.countdown {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: #1e293b;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.countdown h2 {
+    margin-top: 0;
+    color: #cbd5e1;
+    font-size: 1.2rem;
+}
+
+#countdown-display {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #facc15;
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem 0;
+    }
+
+    .nav-list .nav-right {
+        margin-left: 0;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+    }
+
+    .grid-2x2 {
+        gap: 0.5rem;
+    }
+
+    .grid-cell {
+        padding: 0.75rem;
+    }
+
+    #countdown-display {
+        font-size: 1.4rem;
+    }
+}
+
