@@ -94,7 +94,7 @@ The nav bar is just an unordered list stylized horizontally. It lets visitor jum
 </div>
 ```
 
-TODO
+The 2x2 grid is a great format to display brief information
 
 ### 3. `<table>`
 
