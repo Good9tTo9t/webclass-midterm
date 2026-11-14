@@ -50,29 +50,128 @@ This page shows club members the weekly practice time and recent game results, a
 
 ![Join Us page](screenshots/join.png)
 
-TODO
+This page explains how to join our club and shows the membership fee. There is also a short quiz about the club and the rules of the game.
 
 ## (b.) How users navigate between pages
 
-TODO
+Users can move between pages by using the navigation bar at the very top of every page. The active tab is in a different color so useres know which page they're on. 
 
 # C. HTML and CSS Explanation
 
 ## (a.) HTML elements
 
-### 1. TODO
+### 1. `<nav>`
 
-### 2. TODO
+![Navigation bar](screenshots/html-nav.png)
 
-### 3. TODO
+```html
+<nav class="navbar" aria-label="主選單">
+  <ul class="nav-list">
+    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">首頁</a></li>
+    <li class="nav-item"><a href="about.html" class="nav-link">關於我們</a></li>
+    <li class="nav-item"><a href="rules.html" class="nav-link">規則教學</a></li>
+    <li class="nav-item"><a href="schedule.html" class="nav-link">活動賽程</a></li>
+    <li class="nav-item"><a href="join.html" class="nav-link">加入我們</a></li>
+  </ul>
+</nav>
+```
+
+The nav bar is just an unordered list stylized horizontally. It lets visitor jump between all pages of the site. 
+
+### 2. `<div>` (2×2 grid)
+
+![2x2 grid](screenshots/html-grid.png)
+
+```html
+<div class="grid-2x2">
+  <div class="grid-cell">
+    <h3>新手友善</h3>
+    <p>瓶蓋棒球比起棒球更好上手，只要花5分鐘就能丟出漂亮變化球。</p>
+  </div>
+  <div class="grid-cell">...</div>
+  <div class="grid-cell">...</div>
+  <div class="grid-cell">...</div>
+</div>
+```
+
+TODO
+
+### 3. `<table>`
+
+![Table](screenshots/html-table.png)
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>擊球情況</th>
+      <th>判定結果</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>球擊出後碰到外野區域但未碰到全壘打牆</td>
+      <td>一壘安打</td>
+    </tr>
+    ...
+  </tbody>
+</table>
+```
+
+TODO
 
 ## (b.) CSS properties
 
-### 1. TODO
+### 1. `display: grid` / `grid-template-columns`
 
-### 2. TODO
+![Grid layout](screenshots/css-grid.png)
 
-### 3. TODO
+```css
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+```
+
+TODO
+
+### 2. `display: flex` / `flex-wrap`
+
+![Flex layout](screenshots/css-flex.png)
+
+```css
+.officer-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.officer-card {
+    flex: 1;
+    min-width: 200px;
+}
+```
+
+TODO
+
+### 3. `:hover` / `transition`
+
+![Hover effect](screenshots/css-hover.png)
+
+```css
+.grid-cell {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid-cell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+```
+
+TODO
 
 # D. JavaScript Explanation
 
