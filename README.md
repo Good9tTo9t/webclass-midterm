@@ -38,7 +38,7 @@ This page introduces the history of our club, then introduces the officers of th
 
 ![Rules page](screenshots/rules.png)
 
-TODO
+This page explains the basics rules of the game, and teaches visitors how to throw a basic fastball.
 
 ### Schedule (`schedule.html`)
 
