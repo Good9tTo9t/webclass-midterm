@@ -1,13 +1,133 @@
+# NTUT Cap Baseball Club Website
+
+- GitHub Repository: https://github.com/Good9tTo9t/webclass-midterm
+- GitHub Pages: https://good9tto9t.github.io/webclass-midterm/
+
 # A. Project Introduction
-## (a.) What is the purpose of your website?  
-   To introduce cap baseball to potential members. The website also provides some basic rules of the game. The website can also let members see when the next practice will take place. It also informs interested people how to join.
-## (b.) Who are the intended users?  
-   1. Potential members: For people who are already in NTUT, but still looking for a club to join.  
-   2. Current members: For people who are already in the club, it's a hub for all the latest information.
-## (c.) Why did you choose this topic?  
-   As you can see in the _About Us_ page, I am the president of this club, and I want to let more people know about our club and what we do. This sport is relatively unknown, so I'd like to introduce it to more people. FAQs can be answered with this website.\
-   
-2. Website Structure
-3. HTML and CSS Explanation
-4. JavaScript Explanation
-5. Reflection
+
+## (a.) What is the purpose of your website?
+
+The purpose of this website is to introduce cap baseball to potential members. It also explains the basic rules of the game, lets members see when the next practice will take place, and shows interested people how to join.
+
+## (b.) Who are the intended users?
+
+1. **Potential members:** NTUT students who are still looking for a club to join.
+2. **Current members:** people who are already in the club. For them, the website is a hub for all the latest information.
+
+## (c.) Why did you choose this topic?
+
+I am the president of this club, and I want to let more people know about our club and what we do. Cap baseball is still relatively unknown, so I would like to introduce it to more people. The website can also answer common questions, such as how to join and how much the membership fee is.
+
+# B. Website Structure
+
+## (a.) The purpose of each HTML page
+
+### Home (`index.html`)
+
+![Home page](screenshots/index.png)
+
+TODO
+
+### About Us (`about.html`)
+
+![About Us page](screenshots/about.png)
+
+TODO
+
+### Rules (`rules.html`)
+
+![Rules page](screenshots/rules.png)
+
+TODO
+
+### Schedule (`schedule.html`)
+
+![Schedule page](screenshots/schedule.png)
+
+TODO
+
+### Join Us (`join.html`)
+
+![Join Us page](screenshots/join.png)
+
+TODO
+
+## (b.) How users navigate between pages
+
+TODO
+
+# C. HTML and CSS Explanation
+
+## (a.) HTML elements
+
+### 1. TODO
+
+### 2. TODO
+
+### 3. TODO
+
+## (b.) CSS properties
+
+### 1. TODO
+
+### 2. TODO
+
+### 3. TODO
+
+# D. JavaScript Explanation
+
+## Feature 1: Cap Baseball Quiz
+
+![Quiz](screenshots/quiz.png)
+
+### What the feature does
+
+TODO
+
+### Code
+
+```js
+```
+
+### How the code works
+
+TODO
+
+### How JavaScript interacts with the HTML elements
+
+TODO
+
+## Feature 2: Countdown to Next Practice
+
+![Countdown](screenshots/countdown.png)
+
+### What the feature does
+
+TODO
+
+### Code
+
+```js
+```
+
+### How the code works
+
+TODO
+
+### How JavaScript interacts with the HTML elements
+
+TODO
+
+# E. Reflection
+
+## (a.) What was the most challenging part of this project?
+
+TODO
+
+## (b.) What did you learn?
+
+TODO
+
+## (c.) What would you improve if you had more time?
+
+TODO
