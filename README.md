@@ -26,25 +26,25 @@ I am the president of this club, and I want to let more people know about our cl
 
 ![Home page](screenshots/index.png)
 
-The purpose of the page is to impress the visitors with the hero image atop, along with some basic introduction of the sport and the club.
+The purpose of this page is to impress visitors with the hero image at the top, followed by a basic introduction to the sport and the club.
 
 ### About Us (`about.html`)
 
 ![About Us page](screenshots/about.png)
 
-This page introduces the history of our club, then introduces the officers of the club, and finally some liks to our social media.
+This page introduces the history of our club, then the club officers, and finally provides links to our social media.
 
 ### Rules (`rules.html`)
 
 ![Rules page](screenshots/rules.png)
 
-This page explains the basics rules of the game, and teaches visitors how to throw a basic fastball.
+This page explains the basic rules of the game and teaches visitors how to throw a basic fastball.
 
 ### Schedule (`schedule.html`)
 
 ![Schedule page](screenshots/schedule.png)
 
-TODO
+This page shows club members the weekly practice time and recent game results, and includes a countdown clock to the next practice.
 
 ### Join Us (`join.html`)
 
@@ -120,7 +120,7 @@ TODO
 
 ## Feature 3: Dynamic Copyright Information
 
-![Countdown](screenshots/copyright.png)
+![Copyright](screenshots/copyright.png)
 
 ### What the feature does
 
