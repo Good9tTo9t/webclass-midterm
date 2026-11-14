@@ -50,6 +50,12 @@ body {
     text-decoration: none;
 }
 
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
 .hero {
     text-align: center;
     padding: 2rem 1rem;
@@ -60,12 +66,6 @@ body {
     max-width: 480px;
     height: auto;
     border-radius: 12px;
-}
-
-.features {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
 }
 
 .grid-2x2 {
@@ -94,8 +94,7 @@ body {
 }
 
 .countdown {
-    max-width: 800px;
-    margin: 2rem auto;
+    margin: 2rem 0;
     padding: 1.5rem 1rem;
     text-align: center;
     background-color: #1e293b;
@@ -114,6 +113,34 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: #facc15;
+}
+
+.officer-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.officer-card {
+    flex: 1;
+    min-width: 200px;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.officer-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.officer-card p {
+    text-align: left;
+    line-height: 1.6;
 }
 
 @media (max-width: 600px) {
