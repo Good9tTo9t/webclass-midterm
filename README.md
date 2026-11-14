@@ -118,6 +118,27 @@ TODO
 
 TODO
 
+## Feature 3: Dynamic Copyright Information
+
+![Countdown](screenshots/copyright.png)
+
+### What the feature does
+
+TODO
+
+### Code
+
+```js
+```
+
+### How the code works
+
+TODO
+
+### How JavaScript interacts with the HTML elements
+
+TODO
+
 # E. Reflection
 
 ## (a.) What was the most challenging part of this project?
