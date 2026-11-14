@@ -26,13 +26,13 @@ I am the president of this club, and I want to let more people know about our cl
 
 ![Home page](screenshots/index.png)
 
-TODO
+The purpose of the page is to impress the visitors with the hero image atop, along with some basic introduction of the sport and the club.
 
 ### About Us (`about.html`)
 
 ![About Us page](screenshots/about.png)
 
-TODO
+This page introduces the history of our club, then introduces the officers of the club, and finally some liks to our social media.
 
 ### Rules (`rules.html`)
 
