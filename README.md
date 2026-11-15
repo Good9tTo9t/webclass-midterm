@@ -1,4 +1,5 @@
 # NTUT Cap Baseball Club Website
+## By 114590020 吳一弘
 
 - GitHub Repository: https://github.com/Good9tTo9t/webclass-midterm
 - GitHub Pages: https://good9tto9t.github.io/webclass-midterm/
