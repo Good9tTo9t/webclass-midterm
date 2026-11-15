@@ -83,10 +83,4 @@ if (countdownDisplay) {
 
 const copyrightFooter = document.getElementById("copyright");
 
-function updateCopyright(){
-  copyrightFooter.innerHTML = "&copy; " + new Date().getFullYear() + " 北科大瓶蓋棒球社";
-}
-
-if(copyrightFooter){
-  updateCopyright();
-}
+copyrightFooter.innerHTML = "&copy; " + new Date().getFullYear() + " 北科大瓶蓋棒球社";

@@ -135,7 +135,7 @@ This table shows how a hit is judged in cap baseball. A table fits well here sin
 }
 ```
 
-TODO
+`display: grid;` makes the outermost div a grid container, and `grid-template-columns: 1fr 1fr;` splits it into two columns of equal width (fr is short for fraction). The last two lines makes the card move down to the next line if the screen is too small. 
 
 ### 2. `display: flex` / `flex-wrap`
 
@@ -154,7 +154,7 @@ TODO
 }
 ```
 
-TODO
+For the officer cards, I used flexbox. `display: flex;` puts the three cards side by side in a row. `flex: 1;` lets each card take up an equal amout of space. `flex-wrap: wrap;` and `min-width: 200px;` moves the card down to the next line if the screen is too small. 
 
 ### 3. `:hover` / `transition`
 
@@ -171,7 +171,7 @@ TODO
 }
 ```
 
-TODO
+When the mouse hovers over the cell, `transform: translateY(-4px);` moves the cell up a little bit, and `box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);` adds some shadow, so the cell looks like a physical object floating. `transition: transform 0.2s, box-shadow 0.2s;` just smooths it so it doesn't jut out suddenly.
 
 # D. JavaScript Explanation
 
@@ -181,7 +181,7 @@ TODO
 
 ### What the feature does
 
-TODO
+This is a short quiz with four questions about the club and rules of the sport. After answering, visitors click submit and can see the results under every question, and a score is presented. The reset button resets the question to an unanswered state. 
 
 ### Code
 
