@@ -135,7 +135,7 @@ This table shows how a hit is judged in cap baseball. A table fits well here sin
 }
 ```
 
-`display: grid;` makes the outermost div a grid container, and `grid-template-columns: 1fr 1fr;` splits it into two columns of equal width (fr is short for fraction). The last two lines makes the card move down to the next line if the screen is too small. 
+`display: grid;` makes the outermost div a grid container, and `grid-template-columns: 1fr 1fr;` splits it into two columns of equal width (fr is short for fraction). `grid-template-rows: auto auto;` makes two rows, and their height depends on the content. `gap: 1rem;` adds some space between the cells.
 
 ### 2. `display: flex` / `flex-wrap`
 
@@ -154,7 +154,7 @@ This table shows how a hit is judged in cap baseball. A table fits well here sin
 }
 ```
 
-For the officer cards, I used flexbox. `display: flex;` puts the three cards side by side in a row. `flex: 1;` lets each card take up an equal amout of space. `flex-wrap: wrap;` and `min-width: 200px;` moves the card down to the next line if the screen is too small. 
+For the officer cards, I used flexbox. `display: flex;` puts the three cards side by side in a row. `flex: 1;` lets each card take up an equal amount of space. `flex-wrap: wrap;` and `min-width: 200px;` move the cards down to the next line if the screen is too small. 
 
 ### 3. `:hover` / `transition`
 
@@ -181,7 +181,7 @@ When the mouse hovers over the cell, `transform: translateY(-4px);` moves the ce
 
 ### What the feature does
 
-This is a short quiz with four questions about the club and rules of the sport. After answering, visitors click submit and can see the results under every question, and a score is presented. The reset button resets the question to an unanswered state. 
+This is a short quiz with four questions about the club and rules of the sport. After answering, visitors click submit and can see the results under every question, and a score is presented. The reset button resets the questions to an unanswered state. 
 
 ### Code
 
@@ -237,7 +237,7 @@ if (submitButton) {
 
 ### How the code works
 
-When "submit answers" is clicked, a for loop goes through every question. Every div has a `data-answer` attribute, which stores the correct answer. The code finds the radio button selected and compares with that. 
+When "submit answers" is clicked, a for loop goes through every question. Every div has a `data-answer` attribute, which stores the correct answer. The code finds the radio button selected and compares it with that. 
 
 ### How JavaScript interacts with the HTML elements
 
@@ -294,11 +294,11 @@ if (countdownDisplay) {
 
 ### How the code works
 
-First we get the current time with `new Date()`. If we are currently practicing (Monday 19:00~21:00), it shows the message "currently practicing" and the script stop. Otherwise, it works out how many days until monday with `(1 - now.getDay() + 7) % 7` and sets the time of the date to 19:00. If the time has already passed, we add 7 days to it. We now subtract the time now from the practice time to get the difference in milliseconds, and convert that to days, hours, minutes, and seconds with division and mod. 
+First we get the current time with `new Date()`. If we are currently practicing (Monday 19:00~21:00), it shows the message "currently practicing" and the script stops. Otherwise, it works out how many days until Monday with `(1 - now.getDay() + 7) % 7` and sets the time of the date to 19:00. If the time has already passed, we add 7 days to it. We now subtract the time now from the practice time to get the difference in milliseconds, and convert that to days, hours, minutes, and seconds with division and mod. 
 
 ### How JavaScript interacts with the HTML elements
 
-The HTML has an empty `<p id=:"coutdown-display">`. JavaScript grabs it with `getElementById` and updates the countdown with `textContent` every second.
+The HTML has an empty `<p id="countdown-display">`. JavaScript grabs it with `getElementById` and updates the countdown with `textContent` every second.
 
 ## Feature 3: Dynamic Copyright Information
 
@@ -306,32 +306,39 @@ The HTML has an empty `<p id=:"coutdown-display">`. JavaScript grabs it with `ge
 
 ### What the feature does
 
-The footer of every page contains a copyright information along with a year. The year updates by itself, so I don't have to update it every year.
+The footer of every page contains copyright information along with a year. The year updates by itself, so I don't have to update it every year.
 
 ### Code
 
 ```js
 const copyrightFooter = document.getElementById("copyright");
-copyrightFooter.innerHTML = "&copy; " + new Date().getFullYear() + " 北科大瓶蓋棒球社";
+
+function updateCopyright(){
+  copyrightFooter.innerHTML = "&copy; " + new Date().getFullYear() + " 北科大瓶蓋棒球社";
+}
+
+if(copyrightFooter){
+  updateCopyright();
+}
 ```
 
 ### How the code works
 
-We first use `getElementById` to find the Footer element. Then we use `new Date().getFullYear()` to get the current year and put it into the footer with `innerHTML`.
+We first use `getElementById` to find the footer element. Then we use `new Date().getFullYear()` to get the current year and put it into the footer with `innerHTML`.
 
 ### How JavaScript interacts with the HTML elements
 
-Every page has an empty `<p id="copyright">` in the footer. JavaScript finds it using `getElementById` and fills it using `innerHTML`. We use `innerHTML` here instead of `textContent` becuase we need to use `&copy; `.
+Every page has an empty `<p id="copyright">` in the footer. JavaScript finds it using `getElementById` and fills it using `innerHTML`. We use `innerHTML` here instead of `textContent` because we need to use `&copy; `.
 
 # E. Reflection
 
 ## (a.) What was the most challenging part of this project?
 
-I think it's coming up with the concept. I had a good idea of what I want to do, but hard time deciding what to write on each page. I turned to generative AI and it helped me write a basic skeleton of what to do on each page.
+I think it's coming up with the concept. I had a good idea of what I wanted to do, but had a hard time deciding what to write on each page. I turned to generative AI and it helped me write a basic skeleton of what to do on each page.
 
 ## (b.) What did you learn?
 
-I think I've developed a good vibe-coding workflow with this project. I started with a homework from previous lectures, and let the agent take care of the boring parts. I still don't think letting agents start from scratch is a good idea. LLM also helped a lot by choosing colors for me, becuase trust me I suck at that! LLM was also very helpful at writing commit messages. 
+I think I've developed a good vibe-coding workflow with this project. I started with a homework from previous lectures, and let the agent take care of the boring parts. I still don't think letting agents start from scratch is a good idea. The LLM also helped a lot by choosing colors for me, because trust me I suck at that! LLM was also very helpful at writing commit messages. 
 
 ## (c.) What would you improve if you had more time?
 
