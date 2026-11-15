@@ -54,7 +54,7 @@ This page explains how to join our club and shows the membership fee. There is a
 
 ## (b.) How users navigate between pages
 
-Users can move between pages by using the navigation bar at the very top of every page. The active tab is in a different color so useres know which page they're on. 
+Users can move between pages by using the navigation bar at the very top of every page. The active tab is in a different color so users know which page they are on.
 
 # C. HTML and CSS Explanation
 
@@ -76,7 +76,7 @@ Users can move between pages by using the navigation bar at the very top of ever
 </nav>
 ```
 
-The nav bar is just an unordered list stylized horizontally. It lets visitor jump between all pages of the site. 
+The nav bar is simply an unordered list styled to display horizontally. It lets visitors jump between all pages of the site.
 
 ### 2. `<div>` (2×2 grid)
 
@@ -94,7 +94,7 @@ The nav bar is just an unordered list stylized horizontally. It lets visitor jum
 </div>
 ```
 
-The 2x2 grid is a great format to display brief information
+This grid shows some brief promotional information. Basically, it is one big div with `display: grid;` and four smaller divs inside it.
 
 ### 3. `<table>`
 
@@ -118,7 +118,7 @@ The 2x2 grid is a great format to display brief information
 </table>
 ```
 
-TODO
+This table shows how a hit is judged in cap baseball. A table fits well here since each hit has a situation and a result. `<table>` wraps the entire table, `<thead>` contains the header, and `<tbody>` holds the actual data. `<tr>` is one row, and `<th>` is a header cell (which is centered by default), and `<td>` is a normal data cell.
 
 ## (b.) CSS properties
 
