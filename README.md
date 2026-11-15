@@ -186,15 +186,66 @@ This is a short quiz with four questions about the club and rules of the sport. 
 ### Code
 
 ```js
+const submitButton = document.getElementById("quiz-submit");
+const resetButton = document.getElementById("quiz-reset");
+const result = document.getElementById("quiz-result");
+
+if (submitButton) {
+
+  submitButton.addEventListener("click", function () {
+    const questions = document.querySelectorAll(".quiz-question");
+    let score = 0;
+
+    for (let i = 0; i < questions.length; i++) {
+      const question = questions[i];
+      const answer = question.dataset.answer;
+      const chosen = question.querySelector("input:checked");
+      const feedback = question.querySelector(".quiz-feedback");
+
+      if (chosen === null) {
+        feedback.textContent = "你還沒作答喔！";
+        feedback.className = "quiz-feedback wrong";
+      } else if (chosen.value === answer) {
+        score = score + 1;
+        feedback.textContent = "答對了！";
+        feedback.className = "quiz-feedback correct";
+      } else {
+        feedback.textContent = "答錯了，再看看規則教學頁吧！";
+        feedback.className = "quiz-feedback wrong";
+      }
+    }
+
+    result.textContent = "你答對了 " + score + " / " + questions.length + " 題";
+  });
+
+  resetButton.addEventListener("click", function () {
+    const inputs = document.querySelectorAll(".quiz-question input");
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].checked = false;
+    }
+
+    const feedbacks = document.querySelectorAll(".quiz-feedback");
+    for (let i = 0; i < feedbacks.length; i++) {
+      feedbacks[i].textContent = "";
+      feedbacks[i].className = "quiz-feedback";
+    }
+
+    result.textContent = "";
+  });
+}
 ```
 
 ### How the code works
 
-TODO
+When "submit answers" is clicked, a for loop goes through every question. Every div has a `data-answer` attribute, which stores the correct answer. The code finds the radio button selected and compares with that. 
 
 ### How JavaScript interacts with the HTML elements
 
-TODO
+- `getElementById` finds where to show the result, the submit button, and the reset button.
+- `querySelectorAll(".quiz-question");` finds the questions. 
+- `dataset.answer` grabs the correct answer stored in the HTML file.
+- `textContent` changes the feedback text. 
+- `className` switches the feedback text to `correct` or `wrong`. 
 
 ## Feature 2: Countdown to Next Practice
 
@@ -202,20 +253,52 @@ TODO
 
 ### What the feature does
 
-TODO
+On the schedule page, there is a countdown clock showing how long until the next practice. It updates every second. If practice is happening right now, it says "practice is going on" instead.
 
 ### Code
 
 ```js
+const countdownDisplay = document.getElementById("countdown-display");
+
+function updateCountdown() {
+  const now = new Date();
+
+  if (now.getDay() === 1 && now.getHours() >= 19 && now.getHours() < 21) {
+    countdownDisplay.textContent = "現在正在練習中，快來球場！";
+    return;
+  }
+
+  const nextPractice = new Date();
+  const daysToMonday = (1 - now.getDay() + 7) % 7;
+  nextPractice.setDate(now.getDate() + daysToMonday);
+  nextPractice.setHours(19, 0, 0, 0);
+
+  if (nextPractice < now) {
+    nextPractice.setDate(nextPractice.getDate() + 7);
+  }
+
+  const diff = nextPractice - now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+  const minutes = Math.floor(diff / (1000 * 60)) % 60;
+  const seconds = Math.floor(diff / 1000) % 60;
+
+  countdownDisplay.textContent = days + " 天 " + hours + " 小時 " + minutes + " 分 " + seconds + " 秒";
+}
+
+if (countdownDisplay) {
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+}
 ```
 
 ### How the code works
 
-TODO
+First we get the current time with `new Date()`. If we are currently practicing (Monday 19:00~21:00), it shows the message "currently practicing" and the script stop. Otherwise, it works out how many days until monday with `(1 - now.getDay() + 7) % 7` and sets the time of the date to 19:00. If the time has already passed, we add 7 days to it. We now subtract the time now from the practice time to get the difference in milliseconds, and convert that to days, hours, minutes, and seconds with division and mod. 
 
 ### How JavaScript interacts with the HTML elements
 
-TODO
+The HTML has an empty `<p id=:"coutdown-display">`. JavaScript grabs it with `getElementById` and updates the countdown with `textContent` every second.
 
 ## Feature 3: Dynamic Copyright Information
 
@@ -223,31 +306,35 @@ TODO
 
 ### What the feature does
 
-TODO
+The footer of every page contains a copyright information along with a year. The year updates by itself, so I don't have to update it every year.
 
 ### Code
 
 ```js
+const copyrightFooter = document.getElementById("copyright");
+copyrightFooter.innerHTML = "&copy; " + new Date().getFullYear() + " 北科大瓶蓋棒球社";
 ```
 
 ### How the code works
 
-TODO
+We first use `getElementById` to find the Footer element. Then we use `new Date().getFullYear()` to get the current year and put it into the footer with `innerHTML`.
 
 ### How JavaScript interacts with the HTML elements
 
-TODO
+Every page has an empty `<p id="copyright">` in the footer. JavaScript finds it using `getElementById` and fills it using `innerHTML`. We use `innerHTML` here instead of `textContent` becuase we need to use `&copy; `.
 
 # E. Reflection
 
 ## (a.) What was the most challenging part of this project?
 
-TODO
+I think it's coming up with the concept. I had a good idea of what I want to do, but hard time deciding what to write on each page. I turned to generative AI and it helped me write a basic skeleton of what to do on each page.
 
 ## (b.) What did you learn?
 
-TODO
+I think I've developed a good vibe-coding workflow with this project. I started with a homework from previous lectures, and let the agent take care of the boring parts. I still don't think letting agents start from scratch is a good idea. LLM also helped a lot by choosing colors for me, becuase trust me I suck at that!
 
 ## (c.) What would you improve if you had more time?
 
-TODO
+- I would probably let users sign up straight through the website instead of guiding them to other sites. 
+- The navbar now stacks vertically on a phone. It'd be nice if it collapses into a hamburger menu.
+- It'd be nice if we could load game results from a site (eg. [CAP-SCOREBOOK](https://cap-scorebook.com/)) or a file here. 

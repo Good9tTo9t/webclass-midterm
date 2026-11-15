@@ -81,6 +81,6 @@ if (countdownDisplay) {
   setInterval(updateCountdown, 1000);
 }
 
+//dynamic copyright
 const copyrightFooter = document.getElementById("copyright");
-
 copyrightFooter.innerHTML = "&copy; " + new Date().getFullYear() + " 北科大瓶蓋棒球社";
