@@ -339,7 +339,7 @@ I think it's coming up with the concept. I had a good idea of what I wanted to d
 
 ## (b.) What did you learn?
 
-I think I've developed a good vibe-coding workflow with this project. I started with a homework from previous lectures, and let the agent take care of the boring parts. I still don't think letting agents start from scratch is a good idea. The LLM also helped a lot by choosing colors for me, because trust me I suck at that! LLM was also very helpful at writing commit messages. 
+I think I've developed a good vibe-coding workflow with this project. I started with a homework from previous lectures, and let the agent take care of the boring parts. I still don't think letting agents start from scratch is a good idea. The LLM also helped a lot by choosing colors for me, because trust me I suck at that! LLM was also very helpful at writing commit messages. If they've used something I don't understand I do not refrain from asking. 
 
 ## (c.) What would you improve if you had more time?
 
